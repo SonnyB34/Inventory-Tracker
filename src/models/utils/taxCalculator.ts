@@ -1,5 +1,7 @@
-import { Product } from '../product.js';
+import Product from '../product.js';
  
-export function calculateTax(product: Product): number {
+function calculateTax(product: Product): number {
     return product.getPriceWithTax();
 }
+
+export default calculateTax;

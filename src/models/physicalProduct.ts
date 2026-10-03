@@ -1,25 +1,20 @@
-import { Product } from './product.js';
+import Product from './product.js';
 
-export class PhysicalProduct extends Product {
+class PhysicalProduct extends Product {
   weight: number;
 
-  constructor(
-    sku: string,
-    name: string,
-    price: number,
-    weight: number,
-  ) {
+  constructor(sku: string, name: string, price: number, weight: number) {
     super(sku, name, price);
     this.weight = weight;
   }
 
   getPriceWithTax(): number {
-    return this.price * 1.10;
+    return Number((this.price * 1.1).toFixed(2));
   }
 
   get kilogramWeight(): string {
-    return `The item is ${this.weight} kgs`;
+    return `The weight is ${this.weight}kgs`;
   }
 }
 
-
+export default PhysicalProduct;

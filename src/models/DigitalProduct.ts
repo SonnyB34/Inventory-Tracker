@@ -1,19 +1,20 @@
-import { Product } from './product.js';
+import Product from './product.js';
 
+class DigitalProduct extends Product {
+  fileSize: number;
 
- export class DigitalProduct extends Product {
-    fileSize: number;
-
-    constructor(sku: string, name: string, price: number, fileSize: number) {
+  constructor(sku: string, name: string, price: number, fileSize: number) {
     super(sku, name, price);
     this.fileSize = fileSize;
-    }
+  }
 
-    getPriceWithTax(): number {
-        return this.price;
-    }
+  getPriceWithTax(): number {
+    return Number((this.price * 1.1).toFixed(2));
+  }
 
-    get FormattedSize(): string {
-        return `${this.fileSize} in megabytes`
-    }
+  get FormattedSize(): string {
+    return `The file size is ${this.fileSize}megabytes`;
+  }
 }
+
+export default DigitalProduct;

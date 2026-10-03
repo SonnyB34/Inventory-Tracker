@@ -1,4 +1,4 @@
-  export class Product {
+class Product {
   sku: string;
   name: string;
   price: number;
@@ -10,14 +10,11 @@
   }
 
   displayDetails(): string {
-    return `${this.name} is $${this.price.toFixed(2)} with a sku number ${this.sku}`;
+    return `Sku number is ${this.sku}, the item is ${this.name} with a price of ${this.price}`;
   }
 
   getPriceWithTax(): number {
-    return this.price * 1.10;
+    return Number((this.price * 1.1).toFixed(2));
   }
-
-
 }
-
-
+export default Product;

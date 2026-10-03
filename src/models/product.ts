@@ -1,4 +1,4 @@
-export class Product {
+  export class Product {
   sku: string;
   name: string;
   price: number;
@@ -14,6 +14,10 @@ export class Product {
   }
 
   getPriceWithTax(): number {
-    return this.price * 1.1;
+    return this.price * 1.10;
   }
+
+
 }
+
+

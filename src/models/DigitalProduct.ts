@@ -13,7 +13,7 @@ import { Product } from './product.js';
         return this.price;
     }
 
-    get getFormattedSize(): string {
+    get FormattedSize(): string {
         return `${this.fileSize} in megabytes`
     }
 }

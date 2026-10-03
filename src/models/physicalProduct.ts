@@ -2,6 +2,7 @@ import { Product } from './product.js';
 
 export class PhysicalProduct extends Product {
   weight: number;
+
   constructor(
     sku: string,
     name: string,
@@ -13,11 +14,11 @@ export class PhysicalProduct extends Product {
   }
 
   getPriceWithTax(): number {
-    return this.price * 0.10;
+    return this.price * 1.10;
   }
 
   get kilogramWeight(): string {
-    return `${this.weight} kg`;
+    return `The item is ${this.weight} kgs`;
   }
 }
 
